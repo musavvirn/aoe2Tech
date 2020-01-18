@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/aoe2Tech/home/static/css/main.d44c6055.chunk.css",
-    "main.js": "/aoe2Tech/home/static/js/main.9114bf86.chunk.js",
-    "main.js.map": "/aoe2Tech/home/static/js/main.9114bf86.chunk.js.map",
-    "runtime-main.js": "/aoe2Tech/home/static/js/runtime-main.0b2d2782.js",
-    "runtime-main.js.map": "/aoe2Tech/home/static/js/runtime-main.0b2d2782.js.map",
-    "static/css/2.5c2c0080.chunk.css": "/aoe2Tech/home/static/css/2.5c2c0080.chunk.css",
-    "static/js/2.61d7444b.chunk.js": "/aoe2Tech/home/static/js/2.61d7444b.chunk.js",
-    "static/js/2.61d7444b.chunk.js.map": "/aoe2Tech/home/static/js/2.61d7444b.chunk.js.map",
-    "index.html": "/aoe2Tech/home/index.html",
-    "precache-manifest.b021112b53ffe853a5118e28d7883694.js": "/aoe2Tech/home/precache-manifest.b021112b53ffe853a5118e28d7883694.js",
-    "service-worker.js": "/aoe2Tech/home/service-worker.js",
-    "static/css/2.5c2c0080.chunk.css.map": "/aoe2Tech/home/static/css/2.5c2c0080.chunk.css.map",
-    "static/css/main.d44c6055.chunk.css.map": "/aoe2Tech/home/static/css/main.d44c6055.chunk.css.map",
-    "static/js/2.61d7444b.chunk.js.LICENSE": "/aoe2Tech/home/static/js/2.61d7444b.chunk.js.LICENSE"
+    "main.css": "/aoe2Tech/static/css/main.3868932d.chunk.css",
+    "main.js": "/aoe2Tech/static/js/main.37d9a9a0.chunk.js",
+    "main.js.map": "/aoe2Tech/static/js/main.37d9a9a0.chunk.js.map",
+    "runtime-main.js": "/aoe2Tech/static/js/runtime-main.fd1248c5.js",
+    "runtime-main.js.map": "/aoe2Tech/static/js/runtime-main.fd1248c5.js.map",
+    "static/css/2.3cfe45be.chunk.css": "/aoe2Tech/static/css/2.3cfe45be.chunk.css",
+    "static/js/2.b4bea4d1.chunk.js": "/aoe2Tech/static/js/2.b4bea4d1.chunk.js",
+    "static/js/2.b4bea4d1.chunk.js.map": "/aoe2Tech/static/js/2.b4bea4d1.chunk.js.map",
+    "index.html": "/aoe2Tech/index.html",
+    "precache-manifest.07dd0c88fd1dfda8572be1061195da00.js": "/aoe2Tech/precache-manifest.07dd0c88fd1dfda8572be1061195da00.js",
+    "service-worker.js": "/aoe2Tech/service-worker.js",
+    "static/css/2.3cfe45be.chunk.css.map": "/aoe2Tech/static/css/2.3cfe45be.chunk.css.map",
+    "static/css/main.3868932d.chunk.css.map": "/aoe2Tech/static/css/main.3868932d.chunk.css.map",
+    "static/js/2.b4bea4d1.chunk.js.LICENSE": "/aoe2Tech/static/js/2.b4bea4d1.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.0b2d2782.js",
-    "static/css/2.5c2c0080.chunk.css",
-    "static/js/2.61d7444b.chunk.js",
-    "static/css/main.d44c6055.chunk.css",
-    "static/js/main.9114bf86.chunk.js"
+    "static/js/runtime-main.fd1248c5.js",
+    "static/css/2.3cfe45be.chunk.css",
+    "static/js/2.b4bea4d1.chunk.js",
+    "static/css/main.3868932d.chunk.css",
+    "static/js/main.37d9a9a0.chunk.js"
   ]
 }
