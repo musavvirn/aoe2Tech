@@ -1,0 +1,23 @@
+.memberPanel {
+    font-size: 12px;
+
+}
+
+.memberPanel button {
+    font-size: 12px !important;
+    color: gold !important;  
+}
+
+.btn-dark {
+    font-size: 12px !important;
+    color: lightgrey !important; 
+}
+
+.btn-dark:hover {
+    color: white !important; 
+}
+
+.member-btn {
+    width: 120px;
+}
+

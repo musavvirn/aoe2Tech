@@ -1,26 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import CivPanel from "./techtree/civPanel";
+import TreeParent from "./techtree/panels/treeParent";
+import UnitInfo from "./techtree/panels/unitInfo";
+// import {range, townCentre, defense, barracks, stable, castle, siege, monastery, blacksmith, university, economy, dock} from "./techtree/panels/UNIT_NAMES";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super()
+    this.state = {CURRENT_CIV: "Aztecs"}
+    this.update = this.update.bind(this);
+  }
+  
+  update(civ) {
+    this.setState({CURRENT_CIV: civ})
+  }
+  render() {
+    return (
+      <div className="App">
+        <header>
+        <h4> AGE OF EMPIRES 2 TECHNOLOGY TREE </h4>
+        </header>
+        <div>
+          <CivPanel update={this.update} />
+          
+          <TreeParent />
+          <UnitInfo />
+
+          
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
