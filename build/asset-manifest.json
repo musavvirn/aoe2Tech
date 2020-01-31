@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/aoe2Tech/static/css/main.6a4a8892.chunk.css",
+    "main.js": "/aoe2Tech/static/js/main.3a734fef.chunk.js",
+    "main.js.map": "/aoe2Tech/static/js/main.3a734fef.chunk.js.map",
+    "runtime-main.js": "/aoe2Tech/static/js/runtime-main.fd1248c5.js",
+    "runtime-main.js.map": "/aoe2Tech/static/js/runtime-main.fd1248c5.js.map",
+    "static/css/2.3cfe45be.chunk.css": "/aoe2Tech/static/css/2.3cfe45be.chunk.css",
+    "static/js/2.308670a3.chunk.js": "/aoe2Tech/static/js/2.308670a3.chunk.js",
+    "static/js/2.308670a3.chunk.js.map": "/aoe2Tech/static/js/2.308670a3.chunk.js.map",
+    "index.html": "/aoe2Tech/index.html",
+    "precache-manifest.e7bb163fa55fb25a48c7a8e17425c708.js": "/aoe2Tech/precache-manifest.e7bb163fa55fb25a48c7a8e17425c708.js",
+    "service-worker.js": "/aoe2Tech/service-worker.js",
+    "static/css/2.3cfe45be.chunk.css.map": "/aoe2Tech/static/css/2.3cfe45be.chunk.css.map",
+    "static/css/main.6a4a8892.chunk.css.map": "/aoe2Tech/static/css/main.6a4a8892.chunk.css.map",
+    "static/js/2.308670a3.chunk.js.LICENSE": "/aoe2Tech/static/js/2.308670a3.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fd1248c5.js",
+    "static/css/2.3cfe45be.chunk.css",
+    "static/js/2.308670a3.chunk.js",
+    "static/css/main.6a4a8892.chunk.css",
+    "static/js/main.3a734fef.chunk.js"
+  ]
+}
