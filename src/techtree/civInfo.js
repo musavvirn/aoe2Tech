@@ -5,9 +5,21 @@ import DATA from "./data";
 class CivInfo extends Component {
 
     generateInfo() {
+        let dot = '•';
+        let infoFormatted;
+  
         let info;
         let civID = DATA.civs[this.props.civ];
         info = DATA.key_value[civID];
+        info = info.replace(/<br>/g, "\n").replace(/<b>/g, "\n").replace(/<\/b>/g, "\n");
+        info = info.replace("Unique Unit", dot + " Unique Unit");
+        info = info.split(dot).map((item, key) => {
+            return <span key={key}>{dot + ' ' + item}<br/></span>
+        });
+
+       
+
+        
         return info;
     }
     
