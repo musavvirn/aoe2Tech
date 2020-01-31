@@ -259,7 +259,7 @@ export default class TreeParent extends Component {
 
             case "Incas":
                 this.fullUpg = ["Champion", "Halberdier", "Arbalester", "Elite Skirmisher", "Elite Eagle Warrior", "Siege Ram", "Heavy Scorpion", "Monk"];
-                this.setUnique(["Lamayuk", "Andean Sling", "Couriers"]);    
+                this.setUnique(["Kamayuk", "Andean Sling", "Couriers"]);    
                 this.enable(["Eagle Scout", "Eagle Warrior", "Elite Eagle Warrior", "Slinger"]);  
                 this.disable(this.xRange, ["Cavalry Archer", "Hand Cannoneer", "Parthian Tactics", "Heavy Cavalry Archer"]);
                 this.disable(this.xBarracks, []);
