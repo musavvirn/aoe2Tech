@@ -9,7 +9,7 @@ var civService = new CivService();
 
 const CIVS = ["Aztecs", 
             "Berbers", "Britons", "Bulgarians", "Burmese", "Byzantines",
-            "Celts", "Chinese", "Cumans", "Ehtiopians", "Franks",
+            "Celts", "Chinese", "Cumans", "Ethiopians", "Franks",
             "Goths", "Huns", "Incas", "Indians", "Italians",
             "Japanese", "Khmer", "Koreans", "Lithuanians", "Magyars",
             "Malays", "Malians", "Mayans", "Mongols", "Persians",
