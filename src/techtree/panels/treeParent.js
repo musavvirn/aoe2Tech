@@ -4,7 +4,6 @@ import TreePanel from "./treePanel";
 import NotifService, {CIV_SELECTED} from "../Service/notifService";
 import "./panel.css";
 
-
 const NA = "NA";
 const DIS = "disable-";
 var notifService = new NotifService();
@@ -45,7 +44,7 @@ export default class TreeParent extends Component {
         this.resetTree();
         switch (value) {
             case "Aztecs":
-                this.fullUpg = ["Champion", "Elite Eagle Warrior", "Siege Ram", "Siege Onager"];
+                this.fullUpg = ["Champion", "Elite Eagle Warrior", "Siege Ram", "Siege Onager", "Monk"];
                 this.setUnique(["Jaguar Warrior", "Atlatl", "Garland Wars"]);    
                 this.enable(["Eagle Scout", "Eagle Warrior", "Elite Eagle Warrior"]);  
                 this.disable(this.xRange, ["Cavalry Archer", "Hand Cannoneer", "Thumb Ring", "Parthian Tactics", "Heavy Cavalry Archer"]);
@@ -55,7 +54,7 @@ export default class TreeParent extends Component {
                 this.disable(this.xCastle, ["Hoardings"]);
                 this.disable(this.xDefense, ["Bombard Tower", "Keep"])
                 this.disable(this.xBlacksmith, ["Ring Archer Armor", "Scale Barding Armor", "Plate Barding Armor", "Chain Barding Armor"]);
-                this.disable(this.xUniversity, ["Masonry", "Architecture", "Keep", "Bombard Tower"]);
+                this.disable(this.xUniversity, ["Masonry", "Architecture", "Keep Upgrade", "Bombard Tower Upgrade"]);
                 this.disable(this.xMonastery, []);
                 this.disable(this.xEconomy, ["Two-man Saw", "Guilds"]);
                 this.disable(this.xDock, ["Cannon Galleon", "Elite Cannon Galleon", "Galleon", "Heavy Demolition Ship"]);
@@ -72,7 +71,7 @@ export default class TreeParent extends Component {
                 this.disable(this.xCastle, ["Sappers"]);
                 this.disable(this.xDefense, ["Bombard Tower", "Keep"])
                 this.disable(this.xBlacksmith, []);
-                this.disable(this.xUniversity, ["Architecture", "Keep", "Bombard Tower"]);
+                this.disable(this.xUniversity, ["Architecture", "Keep Upgrade", "Bombard Tower Upgrade"]);
                 this.disable(this.xMonastery, ["Sanctity", "Block Printing"]);
                 this.disable(this.xEconomy, ["Two-man Saw"]);
                 this.disable(this.xDock, ["Shipwright"]);
@@ -88,7 +87,7 @@ export default class TreeParent extends Component {
                 this.disable(this.xCastle, []);
                 this.disable(this.xDefense, ["Bombard Tower"])
                 this.disable(this.xBlacksmith, []);
-                this.disable(this.xUniversity, ["Treadmill Crane", "Bombard Tower"]);
+                this.disable(this.xUniversity, ["Treadmill Crane", "Bombard Tower Upgrade"]);
                 this.disable(this.xMonastery, ["Redemption", "Atonement", "Heresy"]);
                 this.disable(this.xEconomy, ["Stone Shaft Mining", "Crop Rotation"]);
                 this.disable(this.xDock, ["Elite Cannon Galleon"]);
@@ -105,36 +104,37 @@ export default class TreeParent extends Component {
                 this.disable(this.xStable, ["Camel Rider", "Heavy Camel Rider"]);
                 this.disable(this.xSiege, ["Bombard Cannon"]);
                 this.disable(this.xCastle, ["Hoardings", "Sappers"]);
-                this.disable(this.xDefense, ["Fortified Wall", "Bombard Tower Build"]);
+                this.disable(this.xDefense, ["Fortified Wall", "Bombard Tower"]);
                 this.disable(this.xBlacksmith, ["Ring Archer Armor"]);
-                this.disable(this.xUniversity, ["Bombard Tower", "Fortified Wall", "Arrowslits"]);
+                this.disable(this.xUniversity, ["Bombard Tower Upgrade", "Fortified Wall Upgrade", "Arrowslits"]);
                 this.disable(this.xMonastery, ["Atonement", "Block Printing"]);
                 this.disable(this.xEconomy, ["Two-man Saw", "Guilds"]);
                 this.disable(this.xDock, ["Fast Fire Ship", "Heavy Demolition Ship", "Elite Cannon Galleon", "Dry Dock", "Shipwright"]);
             break;
 
             case "Burmese":
-                this.fullUpg = ["Halberdier", "Champion", "Hussar", "Heavy Scorpion", "Trebuchet"];
+                this.fullUpg = ["Halberdier", "Champion", "Hussar", "Heavy Scorpion", "Elite Battle Elephant", "Trebuchet", "Bombard Cannon"];
                 this.setUnique(["Arambai", "Howdah", "Manipur Cavalry"]); 
                 this.disable(this.xRange, ["Arbalester", "Hand Cannoneer", "Thumb Ring"]);
                 this.disable(this.xBarracks, []);
+                this.enable(["Battle Elephant", "Elite Battle Elephant"]);
                 this.disable(this.xStable, ["Camel Rider", "Heavy Camel Rider", "Paladin"]);
                 this.disable(this.xSiege, ["Siege Onager", "Siege Ram"]);
                 this.disable(this.xCastle, ["Hoardings", "Sappers"]);
-                this.disable(this.xDefense, ["Bombard Tower Build"]);
+                this.disable(this.xDefense, ["Bombard Tower"]);
                 this.disable(this.xBlacksmith, ["Leather Archer Armor", "Ring Archer Armor"]);
-                this.disable(this.xUniversity, ["Bombard Tower", "Arrowslits"]);
+                this.disable(this.xUniversity, ["Bombard Tower Upgrade", "Arrowslits"]);
                 this.disable(this.xMonastery, ["Heresy"]);
                 this.disable(this.xEconomy, ["Stone Shaft Mining"]);
                 this.disable(this.xDock, ["Fast Fire Ship", "Heavy Demolition Ship", "Shipwright"]);
             break;
 
             case "Byzantines":
-                this.fullUpg = ["Arbalest", "Elite Skirmisher", "Hand Cannoneer"];
+                this.fullUpg = ["Arbalest", "Elite Skirmisher", "Hand Cannoneer", "Monk"];
                 this.setUnique(["Cataphract", "Greek Fire", "Logistica"]); 
                 this.disable(this.xRange, ["Parthian Tactics"]);
                 this.disable(this.xBarracks, []);
-                this.disable(this.xStable, ["Blodlines"]);
+                this.disable(this.xStable, ["Bloodlines"]);
                 this.disable(this.xSiege, ["Siege Onager", "Heavy Scorpion"]);
                 this.disable(this.xCastle, ["Sappers"]);
                 this.disable(this.xDefense, []);
@@ -150,15 +150,128 @@ export default class TreeParent extends Component {
                 this.setUnique(["Woad Raider", "Stronghold", "Furor Celtica"]); 
                 this.disable(this.xRange, ["Arbalest", "Hand Canononeer", "Thumb Ring", "Parthian Tactics"]);
                 this.disable(this.xBarracks, []);
-                this.disable(this.xStable, ["Blodlines", "Camel Rider", "Heavy Camel Rider"]);
+                this.disable(this.xStable, ["Bloodlines", "Camel Rider", "Heavy Camel Rider"]);
                 this.disable(this.xSiege, ["Bombard Cannon"]);
                 this.disable(this.xCastle, []);
-                this.disable(this.xDefense, ["Bombard Tower Build"]);
+                this.disable(this.xDefense, ["Bombard Tower"]);
                 this.disable(this.xBlacksmith, ["Ring Archer Armor", "Bracer", "Plate Barding Armor"]);
-                this.disable(this.xUniversity, ["Architecture", "Bombard Tower"]);
+                this.disable(this.xUniversity, ["Architecture", "Bombard Tower Upgrade"]);
                 this.disable(this.xMonastery, ["Redemption", "Atonement", "Block Printing", "Illumination", "Theocracy"]);
                 this.disable(this.xEconomy, ["Two-Man Saw", "Crop Rotation"]);
                 this.disable(this.xDock, ["Fast Fire Ship", "Elite Cannon Galleon"]);
+            break;
+
+            case "Chinese":
+                this.fullUpg = ["Arbalest", "Elite Skirmisher", "Champion", "Halberdier", "Heavy Camel Rider"];
+                this.setUnique(["Chu Ko Nu", "Great Wall", "Rocketry"]); 
+                this.disable(this.xRange, ["Hand Canononeer", "Thumb Ring"]);
+                this.disable(this.xBarracks, []);
+                this.disable(this.xStable, ["Paladin"]);
+                this.disable(this.xSiege, ["Seige Onager", "Bombard Cannon"]);
+                this.disable(this.xCastle, ["Hoardings"]);
+                this.disable(this.xDefense, []);
+                this.disable(this.xBlacksmith, []);
+                this.disable(this.xUniversity, ["Siege Engineers", "Treadmill Crane"]);
+                this.disable(this.xMonastery, ["Heresy"]);
+                this.disable(this.xEconomy, ["Guilds", "Crop Rotation"]);
+                this.disable(this.xDock, ["Fast Fire Ship", "Elite Cannon Galleon"]);
+            break;
+
+            case "Cumans":
+                this.fullUpg = ["Champion", "Halberdier", "Hussar", "Paladin"];
+                this.setUnique(["Kipchak", "Steppe Husbandry", "Cuman Mercenaries"]); 
+                this.disable(this.xRange, ["Arbalester", "Hand Cannoneer", "Thumb Ring"]);
+                this.disable(this.xBarracks, []);
+                this.disable(this.xStable, ["Heavy Camel Rider", "Husbandry"]);
+                this.disable(this.xSiege, ["Heavy Scorpion", "Bombard Cannon"]);
+                this.disable(this.xCastle, ["Hoardings"]);
+                this.disable(this.xDefense, ["Stone Wall", "Fortified Wall", "Guard Tower", "Keep", "Bombard Tower"]);
+                this.disable(this.xBlacksmith, ["Bracer"]);
+                this.disable(this.xUniversity, ["Fortified Wall Upgrade", "Guard Tower Upgrade", "Treadmill Crane", "Architecture", "Siege Engineers", "Keep Upgrade", "Arrowslits", "Bombard Tower Upgrade"]);
+                this.disable(this.xMonastery, ["Illumination", "Block Printing", "Theocracy"]);
+                this.disable(this.xEconomy, ["Stone Shaft Mining"]);
+                this.disable(this.xDock, ["Dry Dock", "Shipwright", "Cannon Galleon", "Elite Cannon Galleon", "Heavy Demo Ship"]);
+            break;
+
+            case "Ethiopians":
+                this.fullUpg = ["Arbalester", "Elite Skirmisher", "Halberdier", "Trebuchet", "Siege Ram", "Siege Onager", "Bombard Cannon", "Heavy Scorpion"];
+                this.setUnique(["Shotel Warrior", "Royal Heirs", "Torsion Engines"]); 
+                this.disable(this.xRange, ["Hand Cannoneer", "Parthian Tactics"]);
+                this.disable(this.xBarracks, ["Champion"]);
+                this.disable(this.xStable, ["Bloodlines", "Paladin"]);
+                this.disable(this.xSiege, []);
+                this.disable(this.xCastle, ["Hoardings"]);
+                this.disable(this.xDefense, ["Bombard Tower"])
+                this.disable(this.xBlacksmith, ["Plate Barding Armor"]);
+                this.disable(this.xUniversity, ["Treadmill Crane", "Arrowslits", "Bombard Tower Upgrade"]);
+                this.disable(this.xMonastery, ["Redemption", "Block Printing"]);
+                this.disable(this.xEconomy, ["Crop Rotation"]);
+                this.disable(this.xDock, ["Fast Fire Ship", "Elite Cannon Galleon", "Heavy Demo Ship"]);
+            break;
+
+            case "Franks":
+                this.fullUpg = ["Champion", "Halberdier", "Paladin", "Trebuchet", "Bombard Cannon"];
+                this.setUnique(["Throwing Axeman", "Chivalry", "Bearded Axe"]); 
+                this.disable(this.xRange, ["Arbalester", "Thumb Ring", "Parthian Tactics"]);
+                this.disable(this.xBarracks, []);
+                this.disable(this.xStable, ["Bloodlines", "Camel Rider", "Heavy Camel Rider", "Hussar"]);
+                this.disable(this.xSiege, ["Siege Ram", "Siege Onager", "Bombard Cannon"]);
+                this.disable(this.xCastle, ["Sappers"]);
+                this.disable(this.xDefense, ["Keep", "Bombard Tower"]);
+                this.disable(this.xBlacksmith, ["Ring Archer Armor", "Bracer"]);
+                this.disable(this.xUniversity, ["Heated Shot", "Keep Upgrade", "Bombard Tower Upgrade"]);
+                this.disable(this.xMonastery, ["Redemption", "Atonement", "Block Printing", "Illumination", "Theocracy"]);
+                this.disable(this.xEconomy, ["Stone Shaft Mining", "Two-Man Saw", "Guilds"]);
+                this.disable(this.xDock, ["Elite Cannon Galleon", "Shipwright"]);
+            break;
+
+            case "Goths":
+                this.fullUpg = [];
+                this.setUnique(["Huskarl", "Anarchy", "Perfusion", "Heavy Scorpion", "Bombard Cannon", "Trebuchet"]); 
+                this.disable(this.xRange, ["Arbalester", "Thumb Ring", "Parthian Tactics"]);
+                this.disable(this.xBarracks, ["Supplies"]);
+                this.disable(this.xStable, ["Camel Rider", "Heavy Camel Rider", "Paladin"]);
+                this.disable(this.xSiege, ["Siege Ram", "Siege Onager"]);
+                this.disable(this.xCastle, ["Hoardings"]);
+                this.disable(this.xDefense, ["Stone Wall", "Keep", "Fortified Wall", "Bombard Tower"]);
+                this.disable(this.xBlacksmith, ["Plate Barding Armor", "Plate Mail Armor"]);
+                this.disable(this.xUniversity, ["Fortified Wall Upgrade", "Keep Upgrade", "Bombard Tower Upgrade", "Siege Engineers", "Treadmill Crane", "Arrowslits"]);
+                this.disable(this.xMonastery, ["Redemption", "Atonement", "Block Printing", "Heresy"]);
+                this.disable(this.xEconomy, ["Stone Shaft Mining"]);
+                this.disable(this.xDock, ["Elite Cannon Galleon", "Dry Dock"]);
+            break;
+
+            case "Huns":
+                this.fullUpg = ["Paladin", "Hussar", "Trebuchet"];
+                this.setUnique(["Tarkan", "Marauders", "Atheism"]); 
+                this.disable(this.xRange, ["Arbalester", "Hand Cannoneer"]);
+                this.disable(this.xBarracks, ["Champion"]);
+                this.disable(this.xStable, ["Camel Rider", "Heavy Camel Rider"]);
+                this.disable(this.xSiege, ["Onager", "Siege Onager", "Heavy Scorpion", "Bombard Cannon"]);
+                this.disable(this.xCastle, ["Hoardings"]);
+                this.disable(this.xDefense, ["Fortified Wall", "Keep", "Bombard Tower", "Guard Tower"]);
+                this.disable(this.xBlacksmith, ["Ring Archer Armor", "Plate Mail Armor"]);
+                this.disable(this.xUniversity, ["Fortified Wall Upgrade", "Guard Tower Upgrade", "Keep Upgrade", "Bombard Tower Upgrade", "Fortified Wall Upgrade", "Heated Shot", "Treadmill Crane", "Architecture", "Siege Engineers", "Arrowslits"]);
+                this.disable(this.xMonastery, ["Redemption", "Herbal Medicine", "Block Printing", "Theocracy"]);
+                this.disable(this.xEconomy, ["Stone Shaft Mining", "Crop Rotation"]);
+                this.disable(this.xDock, ["Fast Fire Ship", "Cannon Galleon", "Elite Cannon Galleon", "Shipwright"]);
+            break;
+
+            case "Incas":
+                this.fullUpg = ["Champion", "Halberdier", "Arbalester", "Elite Skirmisher", "Elite Eagle Warrior", "Siege Ram", "Heavy Scorpion", "Monk"];
+                this.setUnique(["Lamayuk", "Andean Sling", "Couriers"]);    
+                this.enable(["Eagle Scout", "Eagle Warrior", "Elite Eagle Warrior", "Slinger"]);  
+                this.disable(this.xRange, ["Cavalry Archer", "Hand Cannoneer", "Parthian Tactics", "Heavy Cavalry Archer"]);
+                this.disable(this.xBarracks, []);
+                this.disable(this.xStable, ["Scout Cavalry", "Bloodlines","Light Cavalry", "Knight", "Camel Rider","Hussar", "Cavalier", "Heavy Camel Rider", "Paladin", "Husbandry"]);
+                this.disable(this.xSiege, ["Bombard Cannon", "Siege Onager"]);
+                this.disable(this.xCastle, []);
+                this.disable(this.xDefense, ["Bombard Tower"])
+                this.disable(this.xBlacksmith, ["Scale Barding Armor", "Plate Barding Armor", "Chain Barding Armor"]);
+                this.disable(this.xUniversity, ["Architecture", "Bombard Tower Upgrade"]);
+                this.disable(this.xMonastery, ["Atonement", "Fervor"]);
+                this.disable(this.xEconomy, ["Two-man Saw"]);
+                this.disable(this.xDock, ["Cannon Galleon", "Elite Cannon Galleon", "Heavy Demo Ship"]);
             break;
 
 
@@ -218,19 +331,19 @@ export default class TreeParent extends Component {
                         this.xBarracks[3][2] = unit;
                     break;
                     case "Condottiero":
-                        this.xRange[3][3] = unit;
+                        this.xBarracks[3][3] = unit;
                     break;
                     case "Steppe Lancer":
                         this.xStable[2][3] = unit;
                     break;
                     case "Elite Steppe Lancer":
-                        this.xRange[3][3] = unit;
+                        this.xStable[3][3] = unit;
                     break;
                     case "Battle Elephant":
-                        this.xRange[2][4] = unit;
+                        this.xStable[2][4] = unit;
                     break;
                     case "Elite Battle Elephant":
-                        this.xRange[3][4] = unit;
+                        this.xStable[3][4] = unit;
                     break;
                     case "Missionary":
                         this.xMonastery[3][1] = unit;
@@ -293,10 +406,10 @@ export default class TreeParent extends Component {
         const STABLE = [[NA], ["Scout Cavalry", NA, NA, NA, NA, "Bloodlines"], ["Light Cavalry", "Knight", "Camel Rider", NA, NA, "Husbandry"], ["Hussar", "Cavalier", "Heavy Camel Rider", NA, NA], [NA, "Paladin", NA]];
         const SIEGE = [[NA], [NA], ["Battering Ram", "Mangonel", "Scorpion",NA, NA, NA, NA], ["Capped Ram", "Onager", "Heavy Scorpion",NA, NA, NA, NA], ["Siege Ram", "Siege Onager", NA, "Bombard Cannon"]];
         const CASTLE = [[NA], [NA], ["Jaguar Warrior", NA, "Petard", NA, "Unique Tech 1", NA, NA], ["Elite Longbowman", "Trebuchet", NA, NA, "Unique Tech 2", NA, NA], [NA,NA, "Hoardings", "Sappers", "Conscription", "Spies or Treason"]];
-        const DEFENSE = [["Outpost", NA, "House"], [NA, "Watch Tower", NA, "Palisade Wall", "Stone Wall", "Palisade Gate", "Gate"], [NA, "Guard Tower", NA, NA, "Fortified Wall"], [NA, "Keep", "Bombard Tower Build"], [NA]];
+        const DEFENSE = [["Outpost", NA, "House"], [NA, "Watch Tower", NA, "Palisade Wall", "Stone Wall", "Palisade Gate", "Gate"], [NA, "Guard Tower", NA, NA, "Fortified Wall"], [NA, "Keep", "Bombard Tower"], [NA]];
         const MONASTERY = [[NA], [NA], ["Monk", "Redemption", "Fervor", "Sanctity", "Atonement","Herbal Medicine", "Heresy"], [NA, "Block Printing", "Illumination", "Faith", "Theocracy"], [NA]];
-        const BLACSKMITH = [[NA], ["Forging", "Scale Mail Armor", "Scale Barding Armor", "Fletching", "Padded Archer Armor", NA, NA], ["Iron Casting", "Chain Mail Armor", "Chain Barding Armor", "Bodkin Arrow", "Leather Archer Armor", NA, NA], ["Blast Furnace", "Plate Mail Armor", "Plate Barding Armor", "Bracer", "Ring Archer Armor", NA, NA], [NA]];
-        const UNIVERSITY = [[NA], [NA], ["Masonry", "Fortified Wall", "Ballistics", "Guard Tower", "Heated Shot", "Treadmill Crane", "Murder Holes"], ["Architecture", "Chemistry", "Siege Engineers", "Keep", "Arrowslits", NA, NA], [NA, "Bombard Tower"]];
+        const BLACSKMITH = [[NA], ["Forging", "Scale Mail Armor", "Scale Barding Armor", NA, "Fletching", "Padded Archer Armor", NA], ["Iron Casting", "Chain Mail Armor", "Chain Barding Armor", NA, "Bodkin Arrow", "Leather Archer Armor", NA], ["Blast Furnace", "Plate Mail Armor", "Plate Barding Armor", NA, "Bracer", "Ring Archer Armor", NA], [NA]];
+        const UNIVERSITY = [[NA], [NA], ["Masonry", "Fortified Wall Upgrade", "Ballistics", "Guard Tower Upgrade", "Heated Shot", "Treadmill Crane", "Murder Holes"], ["Architecture", "Chemistry", "Siege Engineers", "Keep Upgrade", "Arrowslits", NA, NA], [NA, "Bombard Tower Upgrade"]];
         const ECONOMY = [[NA], ["Trade Cart", NA, "Coinage", "Double-Bit Axe", "Horse Collar", "Gold Mining", "Stone Mining"], [NA, "Caravan", "Banking", "Bow Saw", "Heavy Plow", "Gold Shaft Mining", "Stone Shaft Mining"], [NA, "Guilds", NA, "Two-man Saw", "Crop Rotation", NA, NA], [NA]];
         const DOCK = [[NA, NA, NA, "Fishing Ship", "Transport Ship"], ["Galley", "Demolition Raft", "Fire Galley", NA, NA, "Trade Cog"], ["War Galley", "Demolition Ship", "Fire Ship", NA, "Gillnets", "Careening"], ["Galleon", "Heavy Demo Ship", "Fast Fire Ship", NA, "Cannon Galleon", "Dry Dock", "Shipwright"], [NA, NA, NA, NA, "Elite Cannon Galleon"]];
         const TOWNCENTRE = [["Villager", "Loom", NA, NA, "Feudal Age"], [NA, NA, "Wheelbarrow", "Town Watch", "Castle Age"], [NA, NA, "Hand Cart", "Town Patrol", "Imperial Age"], [NA], [NA]];
@@ -331,14 +444,14 @@ export default class TreeParent extends Component {
                         
                         </tr>
                         <tr>
-                        <TreePanel key="0213" build="Siege Workshop" tree={this.xSiege}/>
+                        <TreePanel key="0213" build="Siege Workshop" fu={this.fullUpg} tree={this.xSiege}/>
                         <TreePanel key="022" build="Castle" tree={this.xCastle} UT={this.uniqueTech}/>
                         <TreePanel key="033" build="Defense" tree={this.xDefense}/>
                         </tr>
                         <tr>
                         <TreePanel key="023" build="Blacksmith" tree={this.xBlacksmith}/>
                         <TreePanel key="012" build="University" tree={this.xUniversity}/>
-                        <TreePanel key="032" build="Monastery" tree={this.xMonastery}/>
+                        <TreePanel key="032" build="Monastery" fu={this.fullUpg} tree={this.xMonastery}/>
                         </tr>
                         <tr>
                         <TreePanel key="02" build="Town Center" tree={this.xTownCentre}/>
