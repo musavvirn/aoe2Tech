@@ -37,14 +37,22 @@ class Tree extends Component {
         if (this.props.units !== undefined) {
             return this.props.units[i].map(u => {
                 let classTag = this.determineUnitClassName(this.props.fu, u);
-                let uImg = u.toLowerCase().replace(' ', '_').replace(' ', '_');
+                let uImg = u.toLowerCase().replace(/\s/g, '_').replace(' ', '_');
 
+                // modify string to differentiate tower and wall upgrades at University & build in Defense tree
+                if (uImg.includes("_upgrade")) {
+                    uImg = uImg.replace("_upgrade", '');
+                }
+
+                // modify string to remove DIS tag before finding icon (disabled units/techs)
                 if (uImg.startsWith(DIS)) {
                     uImg = uImg.replace(DIS, '');
                     return this.unitDisableIcon(classTag, u, uImg); 
                 } else {
                     return this.unitRegularIcon(classTag, u, uImg); 
                 }
+
+                
                 
             }) 
         }
@@ -53,19 +61,10 @@ class Tree extends Component {
 
     /* generates regular unit icon path */
     unitRegularIcon(classTag, u, uImg) {
-        
-        let img = <>
-            <Tooltip
-                
-                overlayClassName="u-tooltip" 
-                align={{
-                offset: ["0 px", "-15 px"],
-            }}  
-                mouseLeaveDelay="0.0" 
-                destroyTooltipOnHide={true} 
-                placement="top" 
-                overlay={this.tooltipContent()}>
+        let img;
 
+        if (u === NA) {
+            img = <>
                 <img 
                     className={classTag} 
                     name={u} 
@@ -73,10 +72,33 @@ class Tree extends Component {
                     alt="IMG" 
                     onMouseEnter={this.handleUnitHover}>
                 </img>
+                
+                </>
+        } else {        
+            img = <>
+                <Tooltip
+                    
+                    overlayClassName="u-tooltip" 
+                    align={{
+                    offset: ["0 px", "-15 px"],
+                }}  
+                    mouseLeaveDelay="0.0" 
+                    destroyTooltipOnHide={true} 
+                    placement="top" 
+                    overlay={this.tooltipContent()}>
 
-            </Tooltip>
+                    <img 
+                        className={classTag} 
+                        name={u} 
+                        src={require("../Units/" + uImg + ".png")}
+                        alt="IMG" 
+                        onMouseEnter={this.handleUnitHover}>
+                    </img>
+                </Tooltip>
+            </>;
+        }
 
-        </>;
+        
         return (img);
     }
 
@@ -107,7 +129,8 @@ class Tree extends Component {
                                 {"Armor: " + this.state.unitStats.Armor}<br></br>
                                 {"Range: " + this.state.unitStats.Range}<br></br>
                                 {"Cost: " + JSON.stringify(this.state.unitStats.Cost)}<br></br>
-                                <p>{this.state.unitInfo}</p>
+                                <p>{this.state.unitInfo.replace(/<br>/g, '').replace(/<b>/g, '').replace(/<i>/g, '')
+                                .replace(/<\/b>/g, '').replace(/<\/i>/g, '')}</p>
                             </>
             } else if (this.state.unitType === TECHS) {
                 content = <>    <h6>{this.state.unit}</h6>
@@ -148,8 +171,10 @@ class Tree extends Component {
                     name = this.props.UT[0];
                 } else if (name === "Unique Tech 2") {
                     name = this.props.UT[1];
-                } else if(name === "Spies or Treason") {
+                } else if (name === "Spies or Treason") {
                     name = "Spies/Treason";
+                } else if (name.includes("Upgrade"))  {
+                    name = name.replace(" Upgrade", "");
                 } else {
                     
                 }
