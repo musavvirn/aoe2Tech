@@ -124,17 +124,19 @@ class Tree extends Component {
             let content = <div></div>;
             if (this.state.unitType === UNITS) {
                 content = <>    <h6>{this.state.unit}</h6>
-                                {"HP: " + this.state.unitStats.HP + "    "}<br></br>
-                                {"Attack: " + this.state.unitStats.Attack}<br></br>
-                                {"Armor: " + this.state.unitStats.Armor}<br></br>
-                                {"Range: " + this.state.unitStats.Range}<br></br>
-                                {"Cost: " + JSON.stringify(this.state.unitStats.Cost)}<br></br>
+                                <span className="stats">
+                                {"HP ----- " + this.state.unitStats.HP + "    "}<br></br>
+                                {"Attack -- " + this.state.unitStats.Attack}<br></br>
+                                {"Armor --  " + this.state.unitStats.Armor}<br></br>
+                                {"Range --  " + this.state.unitStats.Range}<br></br>
+                                {"Cost ---- " + JSON.stringify(this.state.unitStats.Cost)}<br></br></span>
                                 <p>{this.state.unitInfo.replace(/<br>/g, '').replace(/<b>/g, '').replace(/<i>/g, '')
                                 .replace(/<\/b>/g, '').replace(/<\/i>/g, '')}</p>
                             </>
             } else if (this.state.unitType === TECHS) {
                 content = <>    <h6>{this.state.unit}</h6>
-                                {"Cost: " + JSON.stringify(this.state.unitStats.Cost)}<br></br>
+                                <span className="stats">
+                                {"Cost ---- " + JSON.stringify(this.state.unitStats.Cost)}<br></br></span>
                                 <p>{this.state.unitInfo}</p>
                             </>
             }

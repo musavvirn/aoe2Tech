@@ -11,14 +11,28 @@
 }
 
 .u-tooltip .rc-tooltip-inner {
-    background-color: rgb(255, 248, 210);
-    color: black;
+    font-family: 'Libre Baskerville', cursive; 
+    font-size: 12px;
+    font-weight: lighter;
+    background-color: rgb(0, 0, 0);
+    opacity: 1;
+    color: white;
     border-radius: 0;  
     box-shadow: 
     0 0 1px 2px #5f5c42,
     0 0px 10px 1px rgb(8, 8, 8);
     
     
+}
+
+.u-tooltip .rc-tooltip-inner h6 {
+    color: gold;
+    text-shadow: 1px 1px 10px gold;
+}
+
+.u-tooltip .rc-tooltip-inner .stats {
+    color: rgb(255, 241, 164);
+    text-shadow: 1px 1px 10px gold;
 }
 
 .headingtest {
@@ -132,10 +146,12 @@
 
 
 .panel-space {
+   
     font-size: 12px;
     color: white;
+    
     padding: 5px;
-    background-color: rgb(49, 49, 49) !important;
+    background-color: rgb(66, 66, 66)  !important;
 }
 
 .panel-space:hover {
@@ -149,4 +165,13 @@
     /* box-shadow: 
             0 0 5px 1px #ffe600  ,
             0 0 5px 1px rgb(255, 255, 255); */
+}
+
+.build-name {
+    font-size: 25px;
+    color: gold;
+    text-shadow: -1px -1px 1px #aaa,
+                     0px 1px 5px black,
+                     0px 1px 5px rgba(0,0,0,0.7)
+                     
 }

@@ -14,6 +14,16 @@ select option {
     0 0px 10px 1px rgb(8, 8, 8);
 
 }
+
+.civ-title {
+    color: black;
+    text-shadow: 1px 1px 2px gold;
+    text-shadow: 1px 2px 1px white;
+    font-weight: 1000;
+    text-align: center;
+    font-size: 35px;
+    
+}
 .info {
     /* this makes civ info panel float when scrolling donw */
     /* float: left;
@@ -31,7 +41,10 @@ select option {
 }
 
 .info-text {
-    font-size: 13px;
+    font-family: 'Libre Baskerville', cursive;   
+    font-size: 11px;
+    color: gold;
+    
 }
 
 
@@ -50,7 +63,7 @@ select option {
 }
 
 .btn-dark {
-    background-color: rgb(49, 49, 49) !important;
+    background-color: rgb(66, 66, 66) !important;
 }
 
 .btn-dark:hover {

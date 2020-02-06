@@ -2,20 +2,29 @@
   text-align: left;
 }
 
-.box {
-  
-}
+
 
 header {
-  height: 125px;
-  margin: 10px;
   
   color: white;
   text-align: center;
+  
+
+  padding-top: 5px;
+  height: 125px;
+  margin: 10px;
+  
   background-color: rgb(49, 49, 49);
   box-shadow: 
     0 0 1px 2px #5f5c42,
     0 0px 10px 1px rgb(8, 8, 8);
+}
+
+header h4 {
+  font-size: 50px;
+  text-shadow: 1px 2px 2px black;
+  
+  font-weight: 200 !important;
 }
 
 

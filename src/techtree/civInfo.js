@@ -26,7 +26,7 @@ class CivInfo extends Component {
     render() {
         return(
             <article className="box info btn-dark">
-                <p>{this.props.civ}</p>
+                <p className="civ-title">{this.props.civ}</p>
                 <article className="info-text">{this.generateInfo()}</article>
                               
             </article>

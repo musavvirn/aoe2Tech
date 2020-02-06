@@ -3,6 +3,8 @@ import './App.css';
 import CivPanel from "./techtree/civPanel";
 import TreeParent from "./techtree/panels/treeParent";
 import UnitInfo from "./techtree/panels/unitInfo";
+
+
 // import {range, townCentre, defense, barracks, stable, castle, siege, monastery, blacksmith, university, economy, dock} from "./techtree/panels/UNIT_NAMES";
 
 
@@ -21,7 +23,11 @@ class App extends React.Component {
     return (
       <div className="App">
         <header>
-        <h4> AGE OF EMPIRES 2 TECHNOLOGY TREE </h4>
+        
+
+
+        <h4> Technology Tree </h4>
+        <h4> Age of Empires II : Definitive Edition </h4>
         </header>
         <div>
           <CivPanel update={this.update} />
