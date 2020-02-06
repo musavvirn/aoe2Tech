@@ -44,14 +44,18 @@
 }
 .panel-btn {
     border-color: black !important;
-    background-color: rgb(49, 49, 49) !important;
+    background-color: rgb(29, 29, 29) !important;
     color: gold !important;
     border-radius: 0px !important;
     width: 330px;
     text-align: left !important;
 }
+
+.panel-btn:hover {
+    background-color: rgb(212, 212, 212) !important;
+}
 .panel {
-    color: gold !important;
+    color: rgb(116, 115, 109) !important;
     margin: 10px;
     padding: 0px;
     float: left;
@@ -154,9 +158,6 @@
     background-color: rgb(66, 66, 66)  !important;
 }
 
-.panel-space:hover {
-    background-color: rgb(24, 24, 24) !important;
-}
 
 .img {
     
@@ -174,4 +175,10 @@
                      0px 1px 5px black,
                      0px 1px 5px rgba(0,0,0,0.7)
                      
+}
+
+
+.down-arrow {
+    text-align: right !important;
+    justify-content: right;
 }

@@ -1,13 +1,12 @@
 select option {
-    color:grey;
+    color:black;
      
 }
 
 .civMenu {
-
     border-radius: 0px !important;
     margin: 10px;
-    color: white;
+    color: black !important;
     width: 275px;
     box-shadow: 
     0 0 1px 2px #5f5c42,
@@ -42,11 +41,12 @@ select option {
 
 .info-text {
     font-family: 'Libre Baskerville', cursive;   
-    font-size: 11px;
-    color: gold;
+    font-size: 12px;
+    font-weight: 600;
+    color: black;
+    text-shadow: 2px 2px 10px white;
     
 }
-
 
 .civPanel {
     float: left;
@@ -63,11 +63,11 @@ select option {
 }
 
 .btn-dark {
-    background-color: rgb(66, 66, 66) !important;
+    background-color: rgb(66, 66, 66)  !important;
 }
 
 .btn-dark:hover {
-    background-color: rgb(24, 24, 24) !important;
+    background-color: rgb(214, 214, 214) !important;
 }
 
 
