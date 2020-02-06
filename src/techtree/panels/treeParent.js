@@ -47,7 +47,7 @@ export default class TreeParent extends Component {
                 this.fullUpg = ["Champion", "Elite Eagle Warrior", "Siege Ram", "Siege Onager", "Monk", "Trebuchet"];
                 this.setUnique(["Jaguar Warrior", "Atlatl", "Garland Wars"]);    
                 this.enable(["Eagle Scout", "Eagle Warrior", "Elite Eagle Warrior"]);  
-                this.disable(this.xRange, ["Cavalry Archer", "Hand Cannoneer", "Thumb Ring", "Parthian Tactics", "Heavy Cavalry Archer"]);
+                this.disable(this.xRange, ["Cavalry Archer", "Hand Cannoneer", "Thumb Ring", "Parthian Tactics", "Heavy Cav Archer"]);
                 this.disable(this.xBarracks, ["Halberdier"]);
                 this.disable(this.xStable, ["Scout Cavalry", "Bloodlines","Light Cavalry", "Knight", "Camel Rider","Hussar", "Cavalier", "Heavy Camel Rider", "Paladin", "Husbandry"]);
                 this.disable(this.xSiege, ["Bombard Cannon", "Heavy Scorpion"]);
@@ -80,7 +80,7 @@ export default class TreeParent extends Component {
             case "Britons":
                 this.fullUpg = ["Champion", "Halberdier", "Trebuchet", "Heavy Scorpion"];
                 this.setUnique(["Longbowman", "Yeomen", "Warwolf"]); 
-                this.disable(this.xRange, ["Heavy Cavalry Archer", "Hand Cannoneer", "Thumb Ring", "Parthian Tactics"]);
+                this.disable(this.xRange, ["Heavy Cav Archer", "Hand Cannoneer", "Thumb Ring", "Parthian Tactics"]);
                 this.disable(this.xBarracks, []);
                 this.disable(this.xStable, ["Hussar", "Bloodlines", "Paladin", "Camel Rider", "Heavy Camel Rider"]);
                 this.disable(this.xSiege, ["Siege Ram", "Siege Onager", "Bombard Cannon"]);
@@ -259,7 +259,7 @@ export default class TreeParent extends Component {
                 this.fullUpg = ["Champion", "Halberdier", "Arbalester", "Elite Skirmisher", "Elite Eagle Warrior", "Siege Ram", "Heavy Scorpion"];
                 this.setUnique(["Kamayuk", "Andean Sling", "Couriers"]);    
                 this.enable(["Eagle Scout", "Eagle Warrior", "Elite Eagle Warrior", "Slinger"]);  
-                this.disable(this.xRange, ["Cavalry Archer", "Hand Cannoneer", "Parthian Tactics", "Heavy Cavalry Archer"]);
+                this.disable(this.xRange, ["Cavalry Archer", "Hand Cannoneer", "Parthian Tactics", "Heavy Cav Archer"]);
                 this.disable(this.xBarracks, []);
                 this.disable(this.xStable, ["Scout Cavalry", "Bloodlines","Light Cavalry", "Knight", "Camel Rider","Hussar", "Cavalier", "Heavy Camel Rider", "Paladin", "Husbandry"]);
                 this.disable(this.xSiege, ["Bombard Cannon", "Siege Onager"]);
@@ -274,7 +274,7 @@ export default class TreeParent extends Component {
 
             case "Indians":
                 this.enable(["Imperial Camel Rider"]);
-                this.fullUpg = ["Heavy Cavalry Archer", "Elite Skirmisher", "Hand Cannoneer", "Hussar", "Bombard Cannon", "Trebuchet"];
+                this.fullUpg = ["Heavy Cav Archer", "Elite Skirmisher", "Hand Cannoneer", "Hussar", "Bombard Cannon", "Trebuchet"];
                 this.setUnique(["Elephant Archer", "Sultans", "Shatagni"]); 
                 this.disable(this.xRange, ["Arbalester"]);
                 this.disable(this.xBarracks, ["Champion"]);
@@ -306,7 +306,7 @@ export default class TreeParent extends Component {
             break;
 
             case "Japanese":
-                this.fullUpg = ["Arbalester", "Elite Skirmisher", "Heavy Cavalry Archer", "Hand Cannoneer", "Champion", "Halberdier", "Heavy Scorpion", "Trebuchet"];
+                this.fullUpg = ["Arbalester", "Elite Skirmisher", "Heavy Cav Archer", "Hand Cannoneer", "Champion", "Halberdier", "Heavy Scorpion", "Trebuchet"];
                 this.setUnique(["Samurai", "Yasama", "Kataparuto"]); 
                 this.disable(this.xRange, []);
                 this.disable(this.xBarracks, []);
@@ -374,7 +374,7 @@ export default class TreeParent extends Component {
             
 
             case "Turks":
-                this.fullUpg = ["Heavy Cavalry Archer", "Hand Cannoneer", "Hussar", "Heavy Camel Rider", "Champion"];
+                this.fullUpg = ["Heavy Cav Archer", "Hand Cannoneer", "Hussar", "Heavy Camel Rider", "Champion"];
                 this.setUnique(["Janissary", "Sipahi", "Artillery"]); 
                 this.disable(this.xRange, ["Arbalester", "Elite Skirmisher"]);
                 this.disable(this.xBarracks, ["Pikeman", "Halberdier"]);
@@ -501,7 +501,7 @@ export default class TreeParent extends Component {
     resetTree() {
         this.fullUpg = [];
         this.uniqueTech = [];
-        const RANGE = [[NA], ["Archer", "Skirmisher"], ["Crossbowman", "Elite Skirmisher", "Cavalry Archer", NA, NA, "Thumb Ring"], ["Arbalester", NA, "Heavy Cavalry Archer", "Hand Cannoneer", NA, "Parthian Tactics"], [NA]];
+        const RANGE = [[NA], ["Archer", "Skirmisher"], ["Crossbowman", "Elite Skirmisher", "Cavalry Archer", NA, NA, "Thumb Ring"], ["Arbalester", NA, "Heavy Cav Archer", "Hand Cannoneer", NA, "Parthian Tactics"], [NA]];
         const BARRACKS = [["Militia"], ["Man-at-Arms", "Spearman", NA, NA, "Supplies"], ["Long Swordsman", "Pikeman", NA, NA, "Squires", "Arson",], ["Two-Handed Swordsman", "Halberdier", NA, NA], ["Champion", NA, NA, NA]];
         const STABLE = [[NA], ["Scout Cavalry", NA, NA, NA, NA, "Bloodlines"], ["Light Cavalry", "Knight", "Camel Rider", NA, NA, "Husbandry"], ["Hussar", "Cavalier", "Heavy Camel Rider", NA, NA], [NA, "Paladin", NA]];
         const SIEGE = [[NA], [NA], ["Battering Ram", "Mangonel", "Scorpion",NA, NA, NA, NA], ["Capped Ram", "Onager", "Heavy Scorpion",NA, NA, NA, NA], ["Siege Ram", "Siege Onager", NA, "Bombard Cannon"]];
