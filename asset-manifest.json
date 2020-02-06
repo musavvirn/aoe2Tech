@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/aoe2Tech/static/css/main.f6e80a94.chunk.css",
-    "main.js": "/aoe2Tech/static/js/main.5dc12e58.chunk.js",
-    "main.js.map": "/aoe2Tech/static/js/main.5dc12e58.chunk.js.map",
+    "main.js": "/aoe2Tech/static/js/main.3b0bafcd.chunk.js",
+    "main.js.map": "/aoe2Tech/static/js/main.3b0bafcd.chunk.js.map",
     "runtime-main.js": "/aoe2Tech/static/js/runtime-main.771cfc87.js",
     "runtime-main.js.map": "/aoe2Tech/static/js/runtime-main.771cfc87.js.map",
     "static/css/2.5c2c0080.chunk.css": "/aoe2Tech/static/css/2.5c2c0080.chunk.css",
     "static/js/2.0d113f74.chunk.js": "/aoe2Tech/static/js/2.0d113f74.chunk.js",
     "static/js/2.0d113f74.chunk.js.map": "/aoe2Tech/static/js/2.0d113f74.chunk.js.map",
     "index.html": "/aoe2Tech/index.html",
-    "precache-manifest.bb05669bed2adecbf615651c79d8fa4b.js": "/aoe2Tech/precache-manifest.bb05669bed2adecbf615651c79d8fa4b.js",
+    "precache-manifest.e6da9e6d7adb8357247095edb8e63007.js": "/aoe2Tech/precache-manifest.e6da9e6d7adb8357247095edb8e63007.js",
     "service-worker.js": "/aoe2Tech/service-worker.js",
     "static/css/2.5c2c0080.chunk.css.map": "/aoe2Tech/static/css/2.5c2c0080.chunk.css.map",
     "static/css/main.f6e80a94.chunk.css.map": "/aoe2Tech/static/css/main.f6e80a94.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.5c2c0080.chunk.css",
     "static/js/2.0d113f74.chunk.js",
     "static/css/main.f6e80a94.chunk.css",
-    "static/js/main.5dc12e58.chunk.js"
+    "static/js/main.3b0bafcd.chunk.js"
   ]
 }
