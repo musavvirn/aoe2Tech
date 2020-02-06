@@ -44,7 +44,10 @@ class TreePanel extends Component {
             <th className="panel">
                 <Button onClick={this.collapse} className="panel-btn" aria-controls="example-collapse-text" aria-expanded={!this.state.open}>
                     <img className="img" src={require("../Buildings/" + this.getImg() + ".png")} alt="IMG"></img>
-                    <span className="build-name">{" "}{this.props.build}</span>
+                    <span className="build-name">
+                        {" "}{this.props.build} 
+                        {/* <span className="down-arrow">&#709; </span> */}
+                        </span>
                 </Button>
                 <Collapse in={this.state.open}>
                     

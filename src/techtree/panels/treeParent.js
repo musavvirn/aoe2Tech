@@ -44,7 +44,7 @@ export default class TreeParent extends Component {
         this.resetTree();
         switch (value) {
             case "Aztecs":
-                this.fullUpg = ["Champion", "Elite Eagle Warrior", "Siege Ram", "Siege Onager", "Monk"];
+                this.fullUpg = ["Champion", "Elite Eagle Warrior", "Siege Ram", "Siege Onager", "Monk", "Trebuchet"];
                 this.setUnique(["Jaguar Warrior", "Atlatl", "Garland Wars"]);    
                 this.enable(["Eagle Scout", "Eagle Warrior", "Elite Eagle Warrior"]);  
                 this.disable(this.xRange, ["Cavalry Archer", "Hand Cannoneer", "Thumb Ring", "Parthian Tactics", "Heavy Cavalry Archer"]);
@@ -57,7 +57,7 @@ export default class TreeParent extends Component {
                 this.disable(this.xUniversity, ["Masonry", "Architecture", "Keep Upgrade", "Bombard Tower Upgrade"]);
                 this.disable(this.xMonastery, []);
                 this.disable(this.xEconomy, ["Two-man Saw", "Guilds"]);
-                this.disable(this.xDock, ["Cannon Galleon", "Elite Cannon Galleon", "Galleon", "Heavy Demolition Ship"]);
+                this.disable(this.xDock, ["Cannon Galleon", "Elite Cannon Galleon", "Galleon", "Heavy Demo Ship"]);
             break;
     
             case "Berbers":
@@ -93,8 +93,6 @@ export default class TreeParent extends Component {
                 this.disable(this.xDock, ["Elite Cannon Galleon"]);
             break;
     
-            
-            
             case "Bulgarians":
                 this.fullUpg = ["Halberdier", "Hussar", "Paladin", "Siege Ram", "Siege Onager", "Heavy Scorpion", "Trebuchet"];
                 this.setUnique(["Konnik", "Stirrups", "Bagains"]); 
@@ -109,7 +107,7 @@ export default class TreeParent extends Component {
                 this.disable(this.xUniversity, ["Bombard Tower Upgrade", "Fortified Wall Upgrade", "Arrowslits"]);
                 this.disable(this.xMonastery, ["Atonement", "Block Printing"]);
                 this.disable(this.xEconomy, ["Two-man Saw", "Guilds"]);
-                this.disable(this.xDock, ["Fast Fire Ship", "Heavy Demolition Ship", "Elite Cannon Galleon", "Dry Dock", "Shipwright"]);
+                this.disable(this.xDock, ["Fast Fire Ship", "Heavy Demo Ship", "Elite Cannon Galleon", "Dry Dock", "Shipwright"]);
             break;
 
             case "Burmese":
@@ -126,7 +124,7 @@ export default class TreeParent extends Component {
                 this.disable(this.xUniversity, ["Bombard Tower Upgrade", "Arrowslits"]);
                 this.disable(this.xMonastery, ["Heresy"]);
                 this.disable(this.xEconomy, ["Stone Shaft Mining"]);
-                this.disable(this.xDock, ["Fast Fire Ship", "Heavy Demolition Ship", "Shipwright"]);
+                this.disable(this.xDock, ["Fast Fire Ship", "Heavy Demo Ship", "Shipwright"]);
             break;
 
             case "Byzantines":
@@ -210,7 +208,7 @@ export default class TreeParent extends Component {
             break;
 
             case "Franks":
-                this.fullUpg = ["Champion", "Halberdier", "Paladin", "Trebuchet", "Bombard Cannon"];
+                this.fullUpg = ["Champion", "Halberdier", "Paladin", "Trebuchet", "Bombard Cannon", "Heavy Scorpion", "Trebuchet"];
                 this.setUnique(["Throwing Axeman", "Chivalry", "Bearded Axe"]); 
                 this.disable(this.xRange, ["Arbalester", "Thumb Ring", "Parthian Tactics"]);
                 this.disable(this.xBarracks, []);
@@ -226,8 +224,8 @@ export default class TreeParent extends Component {
             break;
 
             case "Goths":
-                this.fullUpg = [];
-                this.setUnique(["Huskarl", "Anarchy", "Perfusion", "Heavy Scorpion", "Bombard Cannon", "Trebuchet"]); 
+                this.fullUpg = ["Hand Cannoneer"];
+                this.setUnique(["Huskarl", "Anarchy", "Perfusion"]); 
                 this.disable(this.xRange, ["Arbalester", "Thumb Ring", "Parthian Tactics"]);
                 this.disable(this.xBarracks, ["Supplies"]);
                 this.disable(this.xStable, ["Camel Rider", "Heavy Camel Rider", "Paladin"]);
@@ -258,7 +256,7 @@ export default class TreeParent extends Component {
             break;
 
             case "Incas":
-                this.fullUpg = ["Champion", "Halberdier", "Arbalester", "Elite Skirmisher", "Elite Eagle Warrior", "Siege Ram", "Heavy Scorpion", "Monk"];
+                this.fullUpg = ["Champion", "Halberdier", "Arbalester", "Elite Skirmisher", "Elite Eagle Warrior", "Siege Ram", "Heavy Scorpion"];
                 this.setUnique(["Kamayuk", "Andean Sling", "Couriers"]);    
                 this.enable(["Eagle Scout", "Eagle Warrior", "Elite Eagle Warrior", "Slinger"]);  
                 this.disable(this.xRange, ["Cavalry Archer", "Hand Cannoneer", "Parthian Tactics", "Heavy Cavalry Archer"]);
@@ -274,7 +272,106 @@ export default class TreeParent extends Component {
                 this.disable(this.xDock, ["Cannon Galleon", "Elite Cannon Galleon", "Heavy Demo Ship"]);
             break;
 
+            case "Indians":
+                this.enable(["Imperial Camel Rider"]);
+                this.fullUpg = ["Heavy Cavalry Archer", "Elite Skirmisher", "Hand Cannoneer", "Hussar", "Bombard Cannon", "Trebuchet"];
+                this.setUnique(["Elephant Archer", "Sultans", "Shatagni"]); 
+                this.disable(this.xRange, ["Arbalester"]);
+                this.disable(this.xBarracks, ["Champion"]);
+                this.disable(this.xStable, ["Knight", "Cavalier", "Paladin"]);
+                this.disable(this.xSiege, ["Siege Ram", "Siege Onager", "Heavy Scorpion"]);
+                this.disable(this.xCastle, ["Sappers"]);
+                this.disable(this.xDefense, ["Keep", "Bombard Tower"]);
+                this.disable(this.xBlacksmith, ["Plate Mail Armor"]);
+                this.disable(this.xUniversity, ["Treadmill Crane", "Architecture", "Keep Upgrade", "Arrowslits", "Bombard Tower Upgrade"]);
+                this.disable(this.xMonastery, ["Atonement", "Heresy"]);
+                this.disable(this.xEconomy, ["Crop Rotation"]);
+                this.disable(this.xDock, ["Fast Fire Ship", "Shipwright"]);
+            break;
 
+            case "Italians":
+                this.fullUpg = ["Arbalester", "Elite Skirmisher", "Hand Cannoneer", "Champion", "Hussar"];
+                this.setUnique(["Genoese Crossbowman", "Pavise", "Silk Road"]); 
+                this.disable(this.xRange, ["Parthian Tactics"]);
+                this.disable(this.xBarracks, ["Halberdier"]);
+                this.disable(this.xStable, ["Paladin", "Camel Rider", "Heavy Camel Rider"]);
+                this.disable(this.xSiege, ["Siege Onager", "Siege Ram"]);
+                this.disable(this.xCastle, ["Sappers"]);
+                this.disable(this.xDefense, []);
+                this.disable(this.xBlacksmith, []);
+                this.disable(this.xUniversity, ["Siege Engineers"]);
+                this.disable(this.xMonastery, ["Heresy"]);
+                this.disable(this.xEconomy, ["Gold Shaft Mining"]);
+                this.disable(this.xDock, ["Heavy Demo Ship"]);
+            break;
+
+            case "Japanese":
+                this.fullUpg = ["Arbalester", "Elite Skirmisher", "Heavy Cavalry Archer", "Hand Cannoneer", "Champion", "Halberdier", "Heavy Scorpion", "Trebuchet"];
+                this.setUnique(["Samurai", "Yasama", "Kataparuto"]); 
+                this.disable(this.xRange, []);
+                this.disable(this.xBarracks, []);
+                this.disable(this.xStable, ["Hussar", "Paladin", "Camel Rider", "Heavy Camel Rider"]);
+                this.disable(this.xSiege, ["Siege Onager", "Siege Ram", "Bombard Cannon"]);
+                this.disable(this.xCastle, ["Sappers", "Hoardings"]);
+                this.disable(this.xDefense, ["Bombard Tower"]);
+                this.disable(this.xBlacksmith, ["Plate Barding Armor"]);
+                this.disable(this.xUniversity, ["Architecture", "Bombard Tower Upgrade", "Heated Shot"]);
+                this.disable(this.xMonastery, ["Heresy"]);
+                this.disable(this.xEconomy, ["Stone Shaft Mining", "Guilds"]);
+                this.disable(this.xDock, ["Heavy Demo Ship"]);
+            break;
+            
+            case "Khmer":
+                this.fullUpg = ["Hussar", "Hand Cannoneer", "Heavy Scorpion", "Elite Battle Elephant", "Trebuchet", "Bombard Cannon"];
+                this.setUnique(["Ballista Elephant", "Tusk Swords", "Double Crossbow"]); 
+                this.disable(this.xRange, ["Thumb Ring", "Parthian Tactics"]);
+                this.disable(this.xBarracks, ["Champion"]);
+                this.enable(["Battle Elephant", "Elite Battle Elephant"]);
+                this.disable(this.xStable, ["Camel Rider", "Heavy Camel Rider", "Paladin"]);
+                this.disable(this.xSiege, ["Siege Onager"]);
+                this.disable(this.xCastle, []);
+                this.disable(this.xDefense, ["Bombard Tower"]);
+                this.disable(this.xBlacksmith, ["Plate Mail Armor"]);
+                this.disable(this.xUniversity, ["Bombard Tower Upgrade", "Arrowslits"]);
+                this.disable(this.xMonastery, ["Herbal Medicine", "Block Printing", "Heresy"]);
+                this.disable(this.xEconomy, ["Two-man Saw", "Guilds"]);
+                this.disable(this.xDock, ["Heavy Demo Ship", "Shipwright"]);
+            break;
+
+            case "Koreans":
+                this.enable(["Turtle Ship"]);
+                this.fullUpg = ["Arbalester", "Elite Skirmisher", "Hand Cannoneer", "Bombard Cannon", "Trebuchet"];
+                this.setUnique(["War Wagon", "Panokseon ", "Shinkichon "]); 
+                this.disable(this.xRange, []);
+                this.disable(this.xBarracks, []);
+                this.disable(this.xStable, ["Hussar", "Paladin", "Camel Rider", "Heavy Camel Rider", "Bloodlines"]);
+                this.disable(this.xSiege, ["Siege Onager", "Bombard Cannon", "Heavy Scorpion"]);
+                this.disable(this.xCastle, ["Sappers", "Hoardings"]);
+                this.disable(this.xDefense, []);
+                this.disable(this.xBlacksmith, ["Plate Barding Armor", "Blast Furnace"]);
+                this.disable(this.xUniversity, []);
+                this.disable(this.xMonastery, ["Heresy", "Atonement", "Illumination"]);
+                this.disable(this.xEconomy, ["Crop Rotation"]);
+                this.disable(this.xDock, ["Elite Cannon Galleon", "Demolition Raft", "Demolition Ship", "Heavy Demo Ship"]);
+            break;
+
+            case "Lithuanians":
+                this.fullUpg = ["Elite Skirmisher", "Hand Cannoneer", "Hussar", "Paladin", "Siege Ram", "Siege Onager", "Monk", "Trebuchet"];
+                this.setUnique(["Leitis", "Hill Forts", "Tower Shields"]); 
+                this.disable(this.xRange, ["Arbalester", "Parthian Tactics"]);
+                this.disable(this.xBarracks, ["Champion"]);
+                this.disable(this.xStable, ["Camel Rider", "Heavy Camel Rider"]);
+                this.disable(this.xSiege, ["Heavy Scorpion", "Siege Ram", "Siege Onager"]);
+                this.disable(this.xCastle, ["Sappers"]);
+                this.disable(this.xDefense, []);
+                this.disable(this.xBlacksmith, ["Plate Mail Armor"]);
+                this.disable(this.xUniversity, ["Arrowslits", "Siege Engineer"]);
+                this.disable(this.xMonastery, []);
+                this.disable(this.xEconomy, ["Gold Shaft Mining"]);
+                this.disable(this.xDock, ["Heavy Demo Ship", "Shipwright"]);
+            break;
+
+            
 
             case "Turks":
                 this.fullUpg = ["Heavy Cavalry Archer", "Hand Cannoneer", "Hussar", "Heavy Camel Rider", "Champion"];
@@ -333,6 +430,9 @@ export default class TreeParent extends Component {
                     case "Condottiero":
                         this.xBarracks[3][3] = unit;
                     break;
+                    case "Imperial Camel Rider":
+                        this.xStable[4][2] = unit;
+                    break;
                     case "Steppe Lancer":
                         this.xStable[2][3] = unit;
                     break;
@@ -349,16 +449,16 @@ export default class TreeParent extends Component {
                         this.xMonastery[3][1] = unit;
                     break;
                     case "Caravel":
-                        this.xDock[2][4] = unit;
-                        this.xDock[3][4] = "Elite " +unit;
+                        this.xDock[2][3] = unit;
+                        this.xDock[3][3] = "Elite " +unit;
                     break;
                     case "Longboat":
-                        this.xDock[2][4] = unit;
-                        this.xDock[3][4] = "Elite " +unit;
+                        this.xDock[2][3] = unit;
+                        this.xDock[3][3] = "Elite " +unit;
                     break;
                     case "Turtle Ship":
-                        this.xDock[2][4] = unit;
-                        this.xDock[3][4] = "Elite " +unit;
+                        this.xDock[2][3] = unit;
+                        this.xDock[3][3] = "Elite " +unit;
                     break;
                     case "Krepost":
                         this.xDefense[2][0] = unit;
@@ -445,7 +545,7 @@ export default class TreeParent extends Component {
                         </tr>
                         <tr>
                         <TreePanel key="0213" build="Siege Workshop" fu={this.fullUpg} tree={this.xSiege}/>
-                        <TreePanel key="022" build="Castle" tree={this.xCastle} UT={this.uniqueTech}/>
+                        <TreePanel key="022" build="Castle" fu={this.fullUpg} tree={this.xCastle} UT={this.uniqueTech}/>
                         <TreePanel key="033" build="Defense" tree={this.xDefense}/>
                         </tr>
                         <tr>
