@@ -22,10 +22,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <p className="github"><a href="https://github.com/musavvirn/aoe2Tech"><u>(github)</u></a></p>
         <header>
-        
-
-
         <h4> Technology Tree </h4>
         <h4> Age of Empires II : Definitive Edition </h4>
         </header>
