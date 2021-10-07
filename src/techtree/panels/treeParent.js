@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import TreePanel from "./treePanel";
 // import {TOWNCENTRE, RANGE, BARRACKS, STABLE, SIEGE, CASTLE, BLACSKMITH, MONASTERY, UNIVERSITY, ECONOMY, DOCK, DEFENSE} from "./UNIT_NAMES";
-import NotifService, {CIV_SELECTED} from "../Service/notifService";
+import NotifService, {CIV_SELECTED, CIV_TYPED} from "../Service/notifService";
 import "./panel.css";
 
 const NA = "NA";
@@ -33,10 +33,12 @@ export default class TreeParent extends Component {
 
     componentDidMount() {
         notifService.addObserver(CIV_SELECTED, this, this.updateTree);
+        notifService.addObserver(CIV_TYPED, this, this.updateTree);
     }
 
     componentWillUnmount() {
         notifService.removeObserver(this, CIV_SELECTED);
+        notifService.removeObserver(this, CIV_TYPED);
     }
 
     /* value = civ selected */

@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import CivInfo from "./civInfo";
 import "./civ.css";
-import NotifService, {CIV_SELECTED} from "./Service/notifService";
+import NotifService, {CIV_SELECTED, CIV_TYPED} from "./Service/notifService";
 import CivService from "./Service/civService";
+import CivTypedService from "./Service/civTypedService";
 
 var notifService = new NotifService();
 var civService = new CivService();
+var civTypedService = new CivTypedService();
 
-const CIVS = ["Aztecs", 
+export const CIVS = ["Aztecs",
             "Berbers", "Britons", "Bulgarians", "Burmese", "Byzantines",
             "Celts", "Chinese", "Cumans", "Ethiopians", "Franks",
             "Goths", "Huns", "Incas", "Indians", "Italians",
@@ -24,14 +26,23 @@ class CivPanel extends Component {
         this.state = {civ : "Aztecs"}
         this.generateCivMenu = this.generateCivMenu.bind(this);
         this.handleCivSelect = this.handleCivSelect.bind(this);
+        this.civTyped = this.civTyped.bind(this);
     }
 
     componentDidMount() {
-        notifService.addObserver(CIV_SELECTED, this, this.reset)
+        notifService.addObserver(CIV_SELECTED, this, this.reset);
+        notifService.addObserver(CIV_TYPED, this, this.civTyped)
+
     }
 
     componentWillUnmount() {
         notifService.removeObserver(this, CIV_SELECTED);
+        notifService.removeObserver(this, CIV_TYPED);
+    }
+
+    civTyped(value) {
+        this.setState({civ: value});
+        this.props.update(CURRENT_CIV);
     }
 
     reset() {
@@ -53,6 +64,7 @@ class CivPanel extends Component {
         // CURRENT_CIV = event.target.value;
         this.props.update(CURRENT_CIV);
         civService.civSelected(event.target.value);
+
     }
 
     

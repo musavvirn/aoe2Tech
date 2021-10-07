@@ -1,4 +1,5 @@
 export const CIV_SELECTED = "civ selected";
+export const CIV_TYPED = "civ typed";
 export const UNIT_HOVERED = "unit hovered";
 var observers = {};
 var instance = null;
@@ -36,7 +37,7 @@ export default class NotifService {
         var obs = observers[notifName];
 
         if(obs) {
-            for (var i=0; i<obs.length; i++) {
+            for (let i=0; i<obs.length; i++) {
                 if (observer === obs[i].observer) {
                     obs.splice(i, 1);
                     observers[notifName] = obs;
