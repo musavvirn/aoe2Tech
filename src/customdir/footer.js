@@ -58,7 +58,7 @@ class Footer extends Component {
     render() {
         return(
         <article>
-        <div>Press this button to exit:
+            <div><h4>TYPE THE CIV IN THE SEARCH BAR</h4>
             <form onChange={this.handleSubmit}>
                 <input type="text"></input>
 
